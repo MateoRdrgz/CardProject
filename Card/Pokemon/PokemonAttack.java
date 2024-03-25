@@ -7,4 +7,11 @@ public class PokemonAttack {
     int damage;
     String name;
     String description;
+
+    public PokemonAttack(Map<PokemonTypes, Integer> cost, int damage, String name, String description) {
+        this.cost = cost;
+        this.damage = damage;
+        this.name = name;
+        this.description = description;
+    }
 }

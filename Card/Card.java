@@ -6,4 +6,5 @@ public abstract class Card {
     public Card(String cardName) {
         this.cardName = cardName;
     }
+    public abstract String displayCard();
 }
