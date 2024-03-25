@@ -1,5 +1,9 @@
+import Card.Card;
+import Card.Pokemon.PokemonCard;
+import Card.Pokemon.PokemonTypes;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
+
+
+    Card Pikachu = new PokemonCard(PokemonTypes.ELECTRIQUE, "Pikachu", null, 100);
 }
