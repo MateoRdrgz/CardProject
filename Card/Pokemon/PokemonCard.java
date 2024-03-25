@@ -1,5 +1,14 @@
-package Card;
+package Card.Pokemon;
 
-public class PokemonCard extends Card{
+import Card.Card;
+
+import java.util.ArrayList;
+
+public class PokemonCard extends Card {
     PokemonTypes pokemonType;
+    ArrayList<PokemonAttack> attacks;
+
+    public PokemonCard(PokemonTypes pokemonType, String name) {
+        this.pokemonType = pokemonType;
+    }
 }
