@@ -19,7 +19,7 @@ public class Main {
     private static void createPokemonsTestCards() {
         HashMap<PokemonTypes, Integer> costOfAttack1ForPikachu = new HashMap<>();
         costOfAttack1ForPikachu.put(PokemonTypes.INCOLORE, 1);
-        PokemonAttack rugissement = new PokemonAttack(costOfAttack1ForPikachu, 0, "Rugissement", "Pendant le prochain tour de votre adversaire, les attaques du Pokemon Défenseur infligent 20 dégâts de moins (après application de la Faiblesse et de la Résistance).");
+        PokemonAttack rugissement = new PokemonAttack(costOfAttack1ForPikachu, 0, "Rugissement", "Pendant le prochain tour de votre adversaire, les attaques du Pokemon Défenseur infligent 20 dégâts de moins (apres application de la Faiblesse et de la Résistance).");
 
         HashMap<PokemonTypes, Integer> costOfAttack2ForPikachu = new HashMap<>();
         costOfAttack2ForPikachu.put(PokemonTypes.ELECTRIQUE, 2);
