@@ -8,6 +8,11 @@ Il est structuré comme ceci :
 
 ## Logs de développement
 
-25/03/2024 (Nathan) :
+- 25/03/2024 (Nathan) :
+    - Création des classes `Card`, `PokemonCard`,`PokemonAttack` et de l'énumeration `PokemonTypes`.
 
-27/03/2024 (Nathan) :
+
+- 27/03/2024 (Nathan) :
+    - Création de la `CardList`.
+    - Programmation défensive sur les classe de Pokémons et `CardList`.
+    - Ecriture du ReadMe.
