@@ -47,19 +47,19 @@ public class PokemonCard extends Card {
     }
 
     public String displayCard(){
-        String display =  "Carte Pokémon  " + cardName + ", " + healthPoint + "PV : \n";
-        display += "Type : " + pokemonType.name() + "\n";
-        display += "Attaques : \n";
+        String displayToReturn =  "Carte Pokémon  " + cardName + ", " + healthPoint + "PV : \n";
+        displayToReturn += "Type : " + pokemonType.name() + "\n";
+        displayToReturn += "Attaques : \n";
         for (PokemonAttack attack : attacks){
+            displayToReturn += " - ";
             for (PokemonTypes type : attack.cost.keySet()){
-                display += type.name() + " : " + attack.cost.get(type) + " " ;
+                displayToReturn += type.name() + " : " + attack.cost.get(type) + " " ;
             }
-            display += attack.name + " " ;
-            display +=  attack.damage + "\n";
-            display += "Description : " + attack.description + "\n";
+            displayToReturn += " | " + attack.name + " |  " ;
+            displayToReturn +=  attack.damage + "\n";
+            displayToReturn += "   Description : " + attack.description + "\n\n";
         }
-
-
-        return display;
+        
+        return displayToReturn;
     }
 }

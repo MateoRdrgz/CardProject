@@ -22,7 +22,7 @@ public class Creature extends MagicCard{
         this.toughness = toughness;
         this.ability = ability;
     }
-    public void displayCard(){
-        System.out.println("Creature Card: " + cardName);
+    public String displayCard(){
+        return "Creature Card: " + cardName;
     }
 }

@@ -16,7 +16,7 @@ public class Land extends MagicCard{
         this.subType = subType;
         this.ability = ability;
     }
-    public void displayCard(){
-        System.out.println("Land Card: " + cardName);
+    public String displayCard(){
+        return "Land Card: " + cardName;
     }
 }
