@@ -14,8 +14,15 @@ public class PokemonCard extends Card {
         super(name);
         this.attacks = new ArrayList<>();
         this.pokemonType = pokemonType;
-        attacks.add(baseAttack);
-        this.healthPoint = healthPoint;
+        if(baseAttack != null){
+            attacks.add(baseAttack);
+        }
+
+        if(healthPoint == null){
+            healthPoint = 0;
+        }else{
+            this.healthPoint = healthPoint;
+        }
     }
 
     public void addNewAttack(PokemonAttack attack){
@@ -26,39 +33,43 @@ public class PokemonCard extends Card {
         return pokemonType;
     }
 
-    public void setPokemonType(PokemonTypes pokemonType) {
-        this.pokemonType = pokemonType;
-    }
-
     public ArrayList<PokemonAttack> getAttacks() {
         return attacks;
-    }
-
-    public void setAttacks(ArrayList<PokemonAttack> attacks) {
-        this.attacks = attacks;
     }
 
     public Integer getHealthPoint() {
         return healthPoint;
     }
 
-    public void setHealthPoint(Integer healthPoint) {
-        this.healthPoint = healthPoint;
-    }
-
     public String displayCard(){
         String displayToReturn =  "Carte Pokémon  " + cardName + ", " + healthPoint + "PV : \n";
-        displayToReturn += "Type : " + pokemonType.name() + "\n";
-        displayToReturn += "Attaques : \n";
-        for (PokemonAttack attack : attacks){
-            displayToReturn += " - ";
-            for (PokemonTypes type : attack.cost.keySet()){
-                displayToReturn += type.name() + " : " + attack.cost.get(type) + " " ;
-            }
-            displayToReturn += " | " + attack.name + " |  " ;
-            displayToReturn +=  attack.damage + "\n";
-            displayToReturn += "   Description : " + attack.description + "\n\n";
+        if (pokemonType == null){
+            displayToReturn += "Type : Aucun\n";
+        }else{
+            displayToReturn += "Type : " + pokemonType.name() + "\n";
         }
+
+        displayToReturn += "Attaques : \n";
+        if(attacks.size() == 0){
+            displayToReturn += "\tCe Pokémon n'a pas d'attaques\n";
+        }else{
+            for (PokemonAttack attack : attacks){
+                displayToReturn += " - ";
+                for (PokemonTypes type : attack.cost.keySet()){
+                    if (type != null ){
+                        if (attack.cost.get(type) == null) {
+                            displayToReturn += type.name() + " : " + 0 + " ";
+                        }else{
+                            displayToReturn += type.name() + " : " + attack.cost.get(type) + " ";
+                        }
+                    }
+                }
+                displayToReturn += " | " + attack.name + " |  " ;
+                displayToReturn +=  attack.damage + "\n";
+                displayToReturn += "   Description : " + attack.description + "\n\n";
+            }
+        }
+
         
         return displayToReturn;
     }
