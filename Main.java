@@ -1,9 +1,7 @@
-import Card.Card;
 import Card.Pokemon.PokemonAttack;
 import Card.Pokemon.PokemonCard;
 import Card.Pokemon.PokemonTypes;
 import Card.CardList;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.HashMap;
 

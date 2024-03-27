@@ -1,7 +1,6 @@
 package Card.Pokemon;
 
 import Card.Card;
-import jdk.jfr.Unsigned;
 
 import java.util.ArrayList;
 
