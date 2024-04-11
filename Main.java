@@ -17,7 +17,7 @@ public class Main {
 
         runTests();
 
-        listOfAllCards.displayAllCards();
+        listOfAllCards.displayCardsFromArray(listOfAllCards.getAllPokemonCards());
     }
 
     private static void runTests() {
