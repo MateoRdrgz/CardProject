@@ -14,4 +14,20 @@ public class PokemonAttack {
         this.name = name;
         this.description = description;
     }
+
+    public Map<PokemonTypes, Integer> getCost() {
+        return cost;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

@@ -15,7 +15,59 @@ public class Main {
         createPokemonsTestCards();
         createMagicsTestCards();
 
+        runTests();
+
         listOfAllCards.displayAllCards();
+    }
+
+    private static void runTests() {
+        generalTests();
+        testsPokemon();
+        testsMagic();
+    }
+
+    private static void generalTests() {
+        try {
+            assert listOfAllCards.getListOfAllCards().size() == 4;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    private static void testsPokemon(){
+        try {
+            assert listOfAllCards.getAllPokemonCards().size() == 3;
+
+            assert listOfAllCards.getListOfAllCards().get(0).getCardName().equals("Pikachu");
+            assert listOfAllCards.getListOfAllCards().get(1).getCardName().equals("Salameche");
+            assert listOfAllCards.getListOfAllCards().get(2).getCardName().equals("Carapuce");
+
+            assert ((PokemonCard) listOfAllCards.getListOfAllCards().get(0)).getPokemonType().equals(PokemonTypes.ELECTRIQUE);
+            assert ((PokemonCard) listOfAllCards.getListOfAllCards().get(1)).getPokemonType().equals(null);
+            assert ((PokemonCard) listOfAllCards.getListOfAllCards().get(2)).getPokemonType().equals(PokemonTypes.EAU);
+
+            assert ((PokemonCard) listOfAllCards.getListOfAllCards().get(0)).getAttacks().get(0).getName().equals("Rugissement");
+            assert ((PokemonCard) listOfAllCards.getListOfAllCards().get(0)).getAttacks() == null;
+
+            assert (listOfAllCards.getListOfAllCards().get(0) instanceof PokemonCard);
+            assert !(listOfAllCards.getListOfAllCards().get(2) instanceof PokemonCard);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
+
+    private static void testsMagic(){
+        try {
+            assert listOfAllCards.getAllMagicCards().size() == 1;
+
+            assert listOfAllCards.getListOfAllCards().get(3).getCardName().equals("Gobelin à pique");
+
+            assert ((Creature) listOfAllCards.getListOfAllCards().get(3)).getManaCost().length == 3;
+            assert ((Creature) listOfAllCards.getListOfAllCards().get(3)).getManaCost()[0].equals(Mana.Rouge);
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     private static void createMagicsTestCards() {

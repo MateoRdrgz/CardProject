@@ -7,12 +7,25 @@ Il est structuré comme ceci :
 - Une classe `CardList` qui permet de stocker les deux types de carte et de les manipuler. Il existe aussi des méthodes permettant de récupérer seulement les cartes Pokémon ou Magic.
 
 ## Logs de développement
+- **25/03/2024** 
+  - *(Nathan)* :
+      - Création des classes `PokemonCard`,`PokemonAttack` et de l'énumeration `PokemonTypes`.
+  -  *(Mateo)* :
+      - Création des classes `Card`, `MagicCard` et de l'énumeration `MagicCardType` et `Mana`.
 
-- 25/03/2024 (Nathan) :
-    - Création des classes `Card`, `PokemonCard`,`PokemonAttack` et de l'énumeration `PokemonTypes`.
 
+- *27/03/2024*
+  -  *(Nathan)* :
+      - Création de la `CardList` (mise en place du design pattern Singleton).
+      - **Programmation défensive** sur les classe de Pokémons et `CardList`.
+      - Ecriture du ReadMe.
+     
+  -  *(Mateo)* :
+      - Création des classes `Land` et `Creature`
+      - Programmation défensive.
+      - Ecriture du ReadMe.
 
-- 27/03/2024 (Nathan) :
-    - Création de la `CardList`.
-    - Programmation défensive sur les classe de Pokémons et `CardList`.
-    - Ecriture du ReadMe.
+- *02/04/2024*
+    -  *(Nathan et Mateo)* :
+        - Ecriture des tests unitaires.
+

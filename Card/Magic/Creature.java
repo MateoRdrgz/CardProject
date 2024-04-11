@@ -25,4 +25,24 @@ public class Creature extends MagicCard{
     public String displayCard(){
         return "Creature Card: " + cardName;
     }
+
+    public Mana[] getManaCost() {
+        return manaCost;
+    }
+
+    public String getSubType() {
+        return subType;
+    }
+
+    public String getAbility() {
+        return ability;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public int getToughness() {
+        return toughness;
+    }
 }

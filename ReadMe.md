@@ -25,3 +25,19 @@ Il est structuré comme ceci :
       - Programmation défensive.
       - Ecriture du ReadMe.
 
+- *02/04/2024*
+    -  *(Nathan et Mateo)* :
+        - Ecriture des tests unitaires.
+
+- *11/04/2024*
+    -  *(Nathan et Mateo)* :
+        - Amélioration du ReadMe.
+        - Vérification du code.
+
+
+## Points techniques améliorés
+- *Nathan* :
+  - Programmation défensive : J'ai appris à chercher toutes les failles possibles, à me mettre à la place de l'utilisateur afin 
+
+- *Mateo* :
+  - 

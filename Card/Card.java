@@ -6,5 +6,9 @@ public abstract class Card {
     public Card(String cardName) {
         this.cardName = cardName;
     }
+
+    public String getCardName() {
+        return cardName;
+    }
     public abstract String displayCard();
 }
